@@ -18,6 +18,7 @@ __pycache__/
 *.db
 *.sqlite3
 info.json
+info.txt
 
 # PyCharm
 .idea/
