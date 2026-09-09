@@ -17,7 +17,7 @@ single short spike.
 
 ## Stack
 
-Python · Aiogram 3 · psutil · Pydantic Settings · python-dotenv
+Python · Aiogram 3 · psutil · python-dotenv
 
 ## Run locally
 
