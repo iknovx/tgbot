@@ -26,11 +26,11 @@ async def monitoring_loop(bot: Bot) -> None:
                 battery = psutil.sensors_battery()
 
                 metrics = (
-                    ("cpu", cpu >= settings.cpu_alert_threshold, f"⚠️ <b>High CPU usage</b>: {cpu:.0f}%"),
-                    ("memory", memory >= settings.memory_alert_threshold, f"⚠️ <b>High memory usage</b>: {memory:.0f}%"),
-                    ("temperature", temperature is not None and temperature >= settings.temp_alert_threshold,
+                    ("cpu", cpu >= settings.cpu_alert, f"⚠️ <b>High CPU usage</b>: {cpu:.0f}%"),
+                    ("memory", memory >= settings.memory_alert, f"⚠️ <b>High memory usage</b>: {memory:.0f}%"),
+                    ("temperature", temperature is not None and temperature >= settings.temp_alert,
                      f"🌡 <b>High CPU temperature</b>: {temperature:.1f}°C" if temperature is not None else ""),
-                    ("battery", battery is not None and not battery.power_plugged and battery.percent <= settings.battery_low_threshold,
+                    ("battery", battery is not None and not battery.power_plugged and battery.percent <= settings.battery_low,
                      f"🔋 <b>Low battery</b>: {battery.percent:.0f}%" if battery is not None else ""),
                 )
 
